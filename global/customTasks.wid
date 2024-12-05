@@ -1,0 +1,15 @@
+[
+    [
+        "name" : "CustomTask",
+        "displayName" : "Custom Task",
+        "icon" : "data:image/png;base64,iVBORw0KGgoAAAA...",
+        "category" : "Custom created task",
+        "documentation" : "Basic minimal custom task.",
+        "parameters" : [
+            "Message" : new StringDataType()
+        ],
+        "results" : [
+            "Result" : new StringDataType()
+        ]
+    ]
+]
