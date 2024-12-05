@@ -13,7 +13,7 @@
         ]
     ],
         [
-        "name" : "ArrnageShipment",
+        "name" : "ArrangeShipment",
         "displayName" : "Arrange Shipment",
         "icon" : "src/main/resources/META-INF/arrangeShipment/shipping.png",
         "category" : "Invoking Services",
