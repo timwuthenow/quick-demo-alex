@@ -2,7 +2,7 @@
     [
         "name" : "Customer Lookup",
         "displayName" : "Customer Lookup",
-        "icon" : "/customerLookup/customer_lookup.png",
+        "icon" : "customer_lookup.png",
         "category" : "Data Lookup",
         "documentation" : "Basic customer data retrieval.",
         "parameters" : [
@@ -15,7 +15,7 @@
         [
         "name" : "Arrange Shipment",
         "displayName" : "Arrange Shipment",
-        "icon" : "src/main/resources/META-INF/arrangeShipment/shipping.png",
+        "icon" : "shipping.png",
         "category" : "Invoking Services",
         "documentation" : "Call service that arranges shipment.",
         "parameters" : [
