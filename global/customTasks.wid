@@ -1,10 +1,23 @@
 [
     [
-        "name" : "CustomTask",
-        "displayName" : "Custom Task",
+        "name" : "CustomerLookup",
+        "displayName" : "Customer Lookup",
         "icon" : "data:image/png;base64,iVBORw0KGgoAAAA...",
-        "category" : "Custom created task",
-        "documentation" : "Basic minimal custom task.",
+        "category" : "Data Lookup",
+        "documentation" : "Basic customer data retrieval.",
+        "parameters" : [
+            "Message" : new StringDataType()
+        ],
+        "results" : [
+            "Result" : new StringDataType()
+        ]
+    ],
+        [
+        "name" : "ArrnageShipment",
+        "displayName" : "Arrange Shipment",
+        "icon" : "data:image/png;base64,iVBORw0KGgoAAAA...",
+        "category" : "Invoking Services",
+        "documentation" : "Call service that arranges shipment.",
         "parameters" : [
             "Message" : new StringDataType()
         ],

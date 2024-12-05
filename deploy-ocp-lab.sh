@@ -5,6 +5,11 @@ read -p "Input Namespace: " NAMESPACE
 
 # Confirm service name
 SERVICE_NAME="cc-application-approval"
+
+# Define the application group name
+APP_PART_OF="${SERVICE_NAME}-app"
+
+
 BASE_URL=apps.tzrosa-8bc90xwq.pzcn.p1.openshiftapps.com
 KEYCLOAK_URL=keycloak-keycloak.apps.tzrosa-8bc90xwq.pzcn.p1.openshiftapps.com/auth
 read -p "Confirm service name ($SERVICE_NAME)? [Y/n]: " CONFIRM
@@ -22,6 +27,8 @@ mvn clean package \
     -Dquarkus.openshift.deploy=true \
     -Dquarkus.openshift.expose=true \
     -Dquarkus.application.name=$SERVICE_NAME \
+    -Dquarkus.openshift.labels.\"app.kubernetes.io/part-of\"=$APP_PART_OF \
+    -Dquarkus.openshift.labels.\"app.openshift.io/runtime\"=java \
     -Dkogito.service.url=https://$SERVICE_NAME-$NAMESPACE.$BASE_URL \
     -Dkogito.jobs-service.url=https://$SERVICE_NAME-$NAMESPACE.$BASE_URL \
     -Dkogito.dataindex.http.url=https://$SERVICE_NAME-$NAMESPACE.$BASE_URL
@@ -45,6 +52,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: task-console
+  labels:
+    app.kubernetes.io/part-of: $APP_PART_OF
+    app.openshift.io/runtime: nodejs
 spec:
   replicas: 1
   selector:
@@ -105,6 +115,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: management-console
+  labels:
+    app.kubernetes.io/part-of: $APP_PART_OF
+    app.openshift.io/runtime: nodejs
 spec:
   replicas: 1
   selector:
