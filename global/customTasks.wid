@@ -1,6 +1,6 @@
 [
     [
-        "name" : "CustomerLookup",
+        "name" : "Customer Lookup",
         "displayName" : "Customer Lookup",
         "icon" : "/customerLookup/customer_lookup.png",
         "category" : "Data Lookup",
@@ -13,7 +13,7 @@
         ]
     ],
         [
-        "name" : "ArrangeShipment",
+        "name" : "Arrange Shipment",
         "displayName" : "Arrange Shipment",
         "icon" : "src/main/resources/META-INF/arrangeShipment/shipping.png",
         "category" : "Invoking Services",
